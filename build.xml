@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="jgomoku" default="exec">
+	<target name="exec" depends="compile">
+		<java classname="Main" classpath="${basedir}/build/classes" fork="true"/>
+	</target>
+	<target name="main" depends="compile,compress">
+		<description>
+			compile and generate a jar file
+		</description>
+	</target>
+	
+	<target name="compile" depends="clean">
+		<mkdir dir="${basedir}/build/classes"/>
+		<javac srcdir="${basedir}/src" destdir="${basedir}/build/classes" debug="on"/>
+	</target>
+	
+	<target name="compress">
+		<jar destfile="${basedir}/build/jgomoku.jar" basedir="${basedir}/build/classes">
+			<manifest>
+				<attribute name="Main-Class" value="Main"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${basedir}/build"/>
+	</target>
+</project>
