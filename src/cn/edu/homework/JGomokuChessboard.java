@@ -27,6 +27,11 @@ public class JGomokuChessboard extends JComponent{
 		@Override
 		public void stateChanged(ChangeEvent e) {
 			repaint();
+			if(getModel().getStatus()>0){
+				JOptionPane.showMessageDialog(null, 
+						"The "+
+						(getModel().getStatus()==1?"first":"second")+" player win the game!");
+			}
 		}	
 	}
 	
@@ -46,6 +51,7 @@ public class JGomokuChessboard extends JComponent{
 		setForeground(Color.black);
 	}
 	
+	@Override
 	protected void paintComponent(Graphics g)
 	{
 		JGomokuChessboardModel chessboardModel=chessboardListener.getModel();

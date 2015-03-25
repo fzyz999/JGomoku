@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
 public class ComputerPlayerGG extends AbstractComputerPlayer {

@@ -26,6 +26,7 @@ public class Main extends JFrame {
 			newGame.add(pvp);
 			pvp.setText("1P vs 2P");
 			pvp.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gomoku.start(chessboard.getChessboardListener(),
 							chessboard.getChessboardListener());
@@ -38,6 +39,7 @@ public class Main extends JFrame {
 			JMenuItem pvcLuna=new JMenuItem();
 			pvcLuna.setText("Computer Luna");
 			pvcLuna.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gomoku.start(chessboard.getChessboardListener(), computer);
 				}
@@ -46,6 +48,7 @@ public class Main extends JFrame {
 			JMenuItem pvcGG=new JMenuItem();
 			pvcGG.setText("Computer GG");
 			pvcGG.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gomoku.start(chessboard.getChessboardListener(), computer2);
 				}
@@ -58,6 +61,7 @@ public class Main extends JFrame {
 			JMenuItem cvpLuna=new JMenuItem();
 			cvpLuna.setText("Computer Luna");
 			cvpLuna.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gomoku.start(computer, chessboard.getChessboardListener());
 				}
@@ -66,6 +70,7 @@ public class Main extends JFrame {
 			JMenuItem cvpGG=new JMenuItem();
 			cvpGG.setText("Computer GG");
 			cvpGG.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gomoku.start(computer2, chessboard.getChessboardListener());
 				}
@@ -94,6 +99,7 @@ public class Main extends JFrame {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				new Main().setVisible(true);
 			}

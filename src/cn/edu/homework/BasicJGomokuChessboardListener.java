@@ -84,6 +84,7 @@ public class BasicJGomokuChessboardListener implements JGomokuChessboardListener
 	/**
 	 * @return chessboardModel
 	 */
+	@Override
 	public JGomokuChessboardModel getModel() {
 		return chessboardModel;
 	}
@@ -91,6 +92,7 @@ public class BasicJGomokuChessboardListener implements JGomokuChessboardListener
 	/**
 	 * @param chessboardModel 要设置的 chessboardModel
 	 */
+	@Override
 	public void setModel(JGomokuChessboardModel chessboardModel) {
 		this.chessboardModel = chessboardModel;
 	}

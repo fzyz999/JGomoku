@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="src"/>
+	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
+	<classpathentry kind="con" path="/home/wlm/projects/jgomoku"/>
+	<classpathentry kind="lib" path="/usr/share/ant/lib/ant.jar"/>
+	<classpathentry kind="lib" path="/usr/share/ant/lib/ant-antlr.jar"/>
+	<classpathentry kind="lib" path="/usr/share/ant/lib/ant-bootstrap.jar"/>
+	<classpathentry kind="lib" path="/usr/share/ant/lib/ant-launcher.jar"/>
+	<classpathentry kind="lib" path="/usr/share/ant/lib/ant-nodeps.jar"/>
+	<classpathentry kind="lib" path="/etc/java-config-2/current-system-vm/lib/tools.jar"/>
+	<classpathentry kind="lib" path="/opt/oracle-jdk-bin-1.8.0.25/lib/tools.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

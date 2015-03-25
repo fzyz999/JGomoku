@@ -1,10 +1,5 @@
 package cn.edu.homework;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.EventListenerList;
@@ -18,6 +13,7 @@ public class DefaultJGomokuChessboardModel implements JGomokuChessboardModel {
 	private boolean empty=true;
 	private EventListenerList changeListeners=new EventListenerList();
 	
+	@Override
 	public void addChangeListener(ChangeListener listener) {
 		changeListeners.add(ChangeListener.class,listener);
 	}
@@ -91,6 +87,7 @@ public class DefaultJGomokuChessboardModel implements JGomokuChessboardModel {
 		
 		return 0;
 	}
+	@Override
 	public void claer() {
 		empty=true;
 		status=0;
@@ -115,19 +112,23 @@ public class DefaultJGomokuChessboardModel implements JGomokuChessboardModel {
 	     }
 	}
 
+	@Override
 	public int getChessboardState(int x, int y) {
 		return chessboard[x][y];
 	}
 	
+	@Override
 	public int getStatus()
 	{
 		return status;
 	}
 
+	@Override
 	public void removeChangeEventListener(ChangeListener listener) {
 		changeListeners.remove(ChangeListener.class,listener);
 	}
 
+	@Override
 	public synchronized void setChessboardState(int x, int y, boolean isFirstPlayer) {
 		if(chessboard[x][y]==0){
 			chessboard[x][y]=isFirstPlayer?1:2;

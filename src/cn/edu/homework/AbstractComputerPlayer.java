@@ -10,15 +10,18 @@ abstract class AbstractComputerPlayer implements Player,Runnable{
 	private EventListenerList playerActionEventListeners=new EventListenerList();
 	private boolean isFirstPlayer;
 	
+	@Override
 	public void active(boolean isFirstPlayer)
 	{
 		this.isFirstPlayer=isFirstPlayer;
 		Thread t=new Thread(this,"Computer");
 		t.start();
 	}
+	@Override
 	public JGomokuChessboardModel getModel(){
 		return chessboardModel;
 	}
+	@Override
 	public void setModel(JGomokuChessboardModel model)
 	{
 		chessboardModel=model;
